@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Raffle Simulator</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.png?v=1.1">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div style="display: flex;justify-content: center;">
+    <div id="div1">
+        <h1 id=title >Raffle Simulator</h1>
+        <h2 id=subtitle>Input a CSV or Text and we'll raffle it up!</h2>
+        <input type="file" id="actual-btn" accept=".csv" hidden/>
+        <div>
+            <label id="upload" for="actual-btn">Choose File</label>
+            <button id="textInput">Text Input</button>
+        </div>
+        <hr width="620px"style="margin-top:20px;"opacity=0.25 color="white">
+        <div id="fileSettings">
+            <div  style="display:flex;justify-content:center;padding-top:0px;">
+                <div style="padding-right:30px;">
+                    <p style="font-size: 18px;">Column number with contestant names</p>
+                    <input type="text" id="nameCol">
+                </div>
+                <div style="padding-left:30px;">
+                    <p style="font-size: 18px;">Column number with amount of chances</p>
+                    <input type="text" id="numCol">
+                </div>
+            </div>
+            <p style="font-size: 20px;padding-top:20px;">Row number the data starts on</p>
+            <input type="text" id="dataRow">
+        </div>
+        <textarea id="hidden" cols="80" rows="12" placeholder="Write out the data with each row formatted:   name,chances
+ 
+ex.
+
+Roxanne,7
+Nicco,12
+Billy,3"></textarea>
+        <hr width="620px"style="margin:30px;"  color="white" opacity=0.25>
+        <button id="submit">Start Raffle</button>
+    </div>
+    <div style="width:682px;display:flex;flex-direction: column;align-items: center;justify-content: center;">
+        <div class="tick1" id="tickContainIdle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 129"><defs><style>.d{fill:#669bbc;}.e{fill:#29335c;}</style></defs><g id="a"/><g id="b"><g id="c"><path class="e" d="M219,64.75c0,17.84,10.15,33.31,25,40.94v23.31H0v-22.82c15.39-7.43,26-23.19,26-41.43S15.39,30.75,0,23.32V0H244V23.81c-14.85,7.63-25,23.1-25,40.94Z"/><rect class="d" x="59" y="23" width="125" height="83" rx="14.74" ry="14.74"/></g></g></svg>
+        </div>
+        <div class="tick2" id="tickContainIdle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 129"><defs><style>.d{fill:#669bbc;}.e{fill:#29335c;}</style></defs><g id="a"/><g id="b"><g id="c"><path class="e" d="M219,64.75c0,17.84,10.15,33.31,25,40.94v23.31H0v-22.82c15.39-7.43,26-23.19,26-41.43S15.39,30.75,0,23.32V0H244V23.81c-14.85,7.63-25,23.1-25,40.94Z"/><rect class="d" x="59" y="23" width="125" height="83" rx="14.74" ry="14.74"/></g></g></svg>
+        </div>
+        <div class="tick3" id="tickContainIdle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 129"><defs><style>.d{fill:#669bbc;}.e{fill:#29335c;}</style></defs><g id="a"/><g id="b"><g id="c"><path class="e" d="M219,64.75c0,17.84,10.15,33.31,25,40.94v23.31H0v-22.82c15.39-7.43,26-23.19,26-41.43S15.39,30.75,0,23.32V0H244V23.81c-14.85,7.63-25,23.1-25,40.94Z"/><rect class="d" x="59" y="23" width="125" height="83" rx="14.74" ry="14.74"/></g></g></svg>
+        </div>
+        <div id="BigTick">
+            <div style="position: absolute;width:200px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 129"><defs><style>.d{fill:#669bbc;}.e{fill:#29335c;}</style></defs><g id="a"/><g id="b"><g id="c"><path class="e" d="M219,64.75c0,17.84,10.15,33.31,25,40.94v23.31H0v-22.82c15.39-7.43,26-23.19,26-41.43S15.39,30.75,0,23.32V0H244V23.81c-14.85,7.63-25,23.1-25,40.94Z"/><rect class="d" x="40" y="23" width="165" height="83" rx="14.74" ry="14.74"/></g></g></svg>
+            </div>
+            <div style="position:absolute;display: flex;flex-direction: column;align-items: center;">
+                <div id="winner">Something's wrong</div>
+                <div id="chances">Try again</div>
+                <button id="resetButton">Reset</button>
+            </div>
+        </div>
+        <div id="cabContain">   
+            <div id="square2"></div>    
+            <div id="square">
+                <div id="innerSqr"></div>
+            </div> 
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+<script src="client.js"></script>
+</html>

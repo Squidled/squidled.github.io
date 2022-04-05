@@ -1,0 +1,466 @@
+body {
+    background-color: #669BBC;
+    background: linear-gradient(90deg, #23648e 0%, #669BBC 50%, #23648e 100%);
+    overflow: hidden
+
+  }
+#div1 {
+  font-family: 'Titillium Web', sans-serif;
+
+  text-align:center;
+  color: white;
+}
+#title {
+
+  font-size: 80px;
+
+  margin: 0px;
+  height: 110px;
+  text-align: center;
+}
+#subtitle {
+
+  font-size: 30px;
+  margin: 0px;
+
+  text-align: center;
+  padding-bottom: 20px;
+}
+#upload {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  border-width: 3px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  transition: transform .2s;
+}
+
+#hidden{
+  display: none;
+}
+
+#textarea {
+  margin-top: 10px;
+  display: inline;
+  resize: none;
+  background-color: #29335C;
+  color: white;
+  border-color: white;
+  border-style: solid;
+  font-family: 'Titillium Web', sans-serif;
+
+}
+
+#textInput{
+  font-family: 'Titillium Web', sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  border-width: 3px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  transition: transform .2s;
+}
+
+#upload:hover {
+  transform: scale(1.1);
+}
+
+#textInput:hover {
+  transform: scale(1.1);
+}
+
+input[type=text] {
+  padding:10px;
+  border:2px;
+  border-radius:25px;
+  width:75px;
+  height:25px;
+  text-align: center;
+  background-color: #29335C;
+  color:white;
+  border-style: solid;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  border-color: white;
+  transition: transform .2s;
+}
+input:focus {
+  outline:none;
+}
+input:hover {
+  transform: scale(1.1);
+}
+#submit {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  margin: 10px;
+  border-radius: 25px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  transition: transform .2s;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 20px;
+}
+#submit:hover {
+  transform: scale(1.1);
+}
+
+#resetButton {
+  display: inline-block;
+  font-size: 5px;
+  padding: 2px;
+  padding-left:5px;
+  padding-right:5px;
+  margin: 2px;
+  border-radius: 25px;
+  border-width: 1px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  transition: transform .2s;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#resetButtonDone {
+  display: inline-block;
+  font-size: 5px;
+  padding: 2px;
+  padding-left:5px;
+  padding-right:5px;
+  margin: 2px;
+  border-radius: 25px;
+  border-width: 1px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  transition: transform .2s;
+  font-family: 'Titillium Web', sans-serif;
+  opacity: 0.5;
+  pointer-events: none;
+
+}
+
+#resetButton:hover{
+  transform: scale(1.1);
+}
+
+#done {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+  padding-left:20px;
+  padding-right:20px;
+  margin: 10px;
+  border-radius: 25px;
+  background-color: #29335C;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  transition: transform .2s;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 20px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+#square {
+  height: 350px;
+  width: 400px;
+  background-color: #FFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+
+}   
+#square2 {
+  display: block;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  background-color: #FFF;
+  margin-bottom: 30px;
+}   
+
+#square2open {
+  display: block;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  background-color: #FFF;
+  margin-bottom: 30px;
+  animation-name: open;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+}   
+
+#square2close {
+  display: block;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  background-color: #FFF;
+  margin-bottom: 30px;
+  transform:rotate(60deg)
+                  translateX(150px)
+                  translateY(-200px);
+  animation-name: close;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+}   
+#square2reveal {
+  display: block;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  background-color: #FFF;
+  margin-bottom: 30px;
+  animation-name: reveal2;
+  animation-duration: 2s;
+
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+}
+#square2unreveal {
+  display: block;
+  border-radius: 10px;
+  height: 75px;
+  width: 450px;
+  background-color: #FFF;
+  margin-bottom: 30px;
+  animation-name: reveal2;
+  animation-direction: reverse;
+  animation-duration: 2s;
+
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}   
+
+
+#squarereveal {
+  height: 350px;
+  width: 400px;
+  background-color: #FFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  animation-name: reveal;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+}
+
+#squareunreveal {
+  height: 350px;
+  width: 400px;
+  background-color: #FFF;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  animation-name: reveal;
+  animation-duration: 2s;
+  animation-direction: reverse;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+}
+
+#innerSqr {
+  display: block;
+  border-radius: 100px;
+  height: 75px;
+  width: 200px;
+  background-color: #29335C;
+  transform: translateY(50px);
+
+}
+
+#cabContain {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform:translateY(40px);
+}
+
+#cabContainShake {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform:translateY(40px);
+  animation-name: shake;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+#tickContainIdle {
+  position: absolute;
+  width:100px;
+  transform: translateY(-400px);
+
+}
+
+#tickContain {
+  position: absolute;
+  width:100px;
+  transform: translateY(-400px);
+  animation-name: fall;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+#tickContain2 {
+  position: absolute;
+  width:100px;
+  transform: translateY(-400px)
+              translateX(-100px);
+  animation-name: fall2;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+
+  animation-delay: 0.25s;
+}
+
+#tickContain3 {
+  position: absolute;
+  width:100px;
+  transform: translateY(-400px)
+              translateX(-25px);
+  animation-name: fall3;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+
+  animation-delay: 0.5s;
+}
+
+#BigTick {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#BigTickreveal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: revealtick;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  transform: rotate(90deg)
+              scale(0.1);
+}
+
+#BigTickunreveal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: unrevealtick;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#winner {
+
+  white-space: nowrap;
+  font-size: 14px;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+}
+#chances {
+
+  white-space: nowrap;
+  font-size: 8px;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+
+}
+
+@keyframes open {
+  100% {transform:rotate(60deg)
+                  translateX(150px)
+                  translateY(-200px);}
+}
+
+@keyframes close {
+  100% {transform:rotate(0deg)
+                  translateX(0px)
+                  translateY(0px);}
+}
+
+@keyframes reveal {
+  100% {transform:translateY(800px);}
+}
+
+@keyframes reveal2 {
+  100% {transform:translateY(-500px);}
+}
+
+
+@keyframes fall {
+  100% {transform:translateY(0px)
+                  rotate(40deg)}
+}
+@keyframes fall2 {
+  100% {transform:translateY(0px)
+                  translateX(-100px)
+                  rotate(-60deg)}
+}
+@keyframes fall3 {
+  100% {transform:translateY(0px)
+                  translateX(-25px)
+                  rotate(-20deg)}
+}
+
+@keyframes shake {
+  15% {transform: translateY(100px);}
+  30% {transform: translateY(-100px);}
+  45% {transform: translateY(100px);}
+  60% {transform: translateY(-100px);}
+  75% {transform: translateY(100px);}
+  100% {transform: translateY(40px);}
+}
+
+@keyframes revealtick {
+  100% {transform: scale(3)
+                  rotate(0deg);}
+}
+
+@keyframes unrevealtick {
+  0% {transform: scale(3)
+                  rotate(0deg);}
+  100% {transform: scale(0.5)}
+}
