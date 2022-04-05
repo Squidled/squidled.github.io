@@ -125,13 +125,13 @@ input:hover {
 
 #resetButton {
   display: inline-block;
-  font-size: 5px;
-  padding: 2px;
-  padding-left:5px;
-  padding-right:5px;
-  margin: 2px;
+  font-size: 20px;
+  padding: 8px;
+  padding-left:16px;
+  padding-right:16px;
+  margin: 8px;
   border-radius: 25px;
-  border-width: 1px;
+  border-width: 3px;
   background-color: #29335C;
   border-style: solid;
   border-color: white;
@@ -142,13 +142,13 @@ input:hover {
 
 #resetButtonDone {
   display: inline-block;
-  font-size: 5px;
-  padding: 2px;
-  padding-left:5px;
-  padding-right:5px;
-  margin: 2px;
+  font-size: 20px;
+  padding: 8px;
+  padding-left:16px;
+  padding-right:16px;
+  margin: 8px;
   border-radius: 25px;
-  border-width: 1px;
+  border-width: 3px;
   background-color: #29335C;
   border-style: solid;
   border-color: white;
@@ -396,14 +396,14 @@ input:hover {
 #winner {
 
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 48px;
   color:white;
   font-family: 'Titillium Web', sans-serif;
 }
 #chances {
 
   white-space: nowrap;
-  font-size: 8px;
+  font-size: 27px;
   color:white;
   font-family: 'Titillium Web', sans-serif;
 
@@ -455,12 +455,12 @@ input:hover {
 }
 
 @keyframes revealtick {
-  100% {transform: scale(3)
+  100% {transform: scale(1)
                   rotate(0deg);}
 }
 
 @keyframes unrevealtick {
-  0% {transform: scale(3)
+  0% {transform: scale(1)
                   rotate(0deg);}
-  100% {transform: scale(0.5)}
+  100% {transform: scale(0.01)}
 }
