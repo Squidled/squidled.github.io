@@ -10,6 +10,65 @@ body {
   text-align:center;
   color: white;
 }
+
+#cover {
+  background-color: rgba(0, 0, 0, 0.438);
+  position: absolute;
+  height: 100%;
+  width:100%;
+  top:0px;
+  left:0px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: popin;
+  animation-duration: 0.1s;
+
+
+}
+
+@keyframes popin {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.03);}
+    100% {transform: scale(1);}
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+#popup {
+  background-color: #29335C;
+  border-radius: 25px;
+  width: 40%;
+  text-align: center;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  padding: 20px;
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 5px;
+
+}
+
+#closeButton {
+  border-color: #FFF;
+  border-style: solid;
+  border-width: 3px;
+  background-color: #29335C;
+  color: white;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right:20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 20px;
+  border-radius: 25px;
+  transition: transform .2s;
+}
+
+#closeButton:hover {
+  transform: scale(1.1);
+}
+
 #title {
 
   font-size: 80px;
@@ -406,6 +465,19 @@ input:hover {
   font-size: 27px;
   color:white;
   font-family: 'Titillium Web', sans-serif;
+
+}
+
+#bottomPage {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  background-color:#29335c77;
+  left:0px;
+  right:0px;
+  padding: 10px;
+  justify-content: space-between;
+
 
 }
 

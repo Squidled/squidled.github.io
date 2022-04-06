@@ -32,6 +32,18 @@ const bigTick = document.getElementById("BigTick")
 const winnerName = document.getElementById("winner")
 const winnerChances = document.getElementById("chances")
 
+const popups = document.getElementsByClassName("popup")
+
+
+function popupControl(index,command){
+    if (command == "open"){
+        popups[index].id = "cover"
+    }
+    else {
+        popups[index].id = "hidden"
+    }
+}
+
 function csvToArray(csv, testColumn = 0, dataStartRow = 0){
     var linesArray = csv.split("\n")
     var final = []
