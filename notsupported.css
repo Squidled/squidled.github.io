@@ -1,0 +1,14 @@
+body {
+    background-color: #23648e;
+}
+
+.title {
+    margin-bottom: 0px;
+    font-size: 12vw;
+}
+
+.font-color {
+    text-align: center;
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+}
