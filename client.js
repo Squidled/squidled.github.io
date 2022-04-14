@@ -62,6 +62,15 @@ function getOccurrence(array, value) {
     return count;
 }
 
+function colToNum(cstring) {
+    Num = 0
+    for (let i = 0; i < cstring.length; i++){
+        Num = Num + ((cstring.charCodeAt(i) - 96) * Math.pow(26,cstring.length-i-1))
+    }
+    console.log(Num)
+    return Num
+}
+
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
@@ -88,11 +97,14 @@ submitBtn.addEventListener('click', async function(){
         reader.onload = function() {
             var fileData = reader.result;
             var raffleList = []
+            var numColnum = colToNum(numCol.value)
+            var nameColnum = colToNum(nameCol.value)
+            console.log(nameColnum)
             var fileArray = csvToArray(fileData,1,dataRow.value-1)
             for (let i = 0; i < fileArray.length; i++) {
-                amount = fileArray[i][numCol.value-1].match(/\d+/g)
+                amount = fileArray[i][numColnum-1].match(/\d+/g)
                 for (j = 0; j < amount; j++) {
-                    raffleList.push(fileArray[i][nameCol.value-1])
+                    raffleList.push(fileArray[i][nameColnum-1])
                 }
             }
             winner = raffleList[getRndInteger(0,raffleList.length)]
