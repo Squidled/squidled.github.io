@@ -1,5 +1,5 @@
 
-console.log('Client-side code running');
+
 const fileInput = document.getElementById('actual-btn');
 const fakeBtn = document.getElementById("upload")
 const submitBtn = document.getElementById("submit")
@@ -67,7 +67,7 @@ function colToNum(cstring) {
     for (let i = 0; i < cstring.length; i++){
         Num = Num + ((cstring.charCodeAt(i) - 96) * Math.pow(26,cstring.length-i-1))
     }
-    console.log(Num)
+
     return Num
 }
 
@@ -89,17 +89,17 @@ fileInput.addEventListener('click', function(){
 })
 
 submitBtn.addEventListener('click', async function(){
-    console.log(format)
+
     if (format==1){
         const reader = new FileReader();
-        console.log(theFile)
+
         reader.readAsText(theFile)
         reader.onload = function() {
             var fileData = reader.result;
             var raffleList = []
             var numColnum = colToNum(numCol.value)
             var nameColnum = colToNum(nameCol.value)
-            console.log(nameColnum)
+
             var fileArray = csvToArray(fileData,1,dataRow.value-1)
             for (let i = 0; i < fileArray.length; i++) {
                 amount = fileArray[i][numColnum-1].match(/\d+/g)
@@ -122,7 +122,7 @@ submitBtn.addEventListener('click', async function(){
             }
         }
         winner = raffleList[getRndInteger(0,raffleList.length)]
-        console.log(raffleList)
+
         winnerName.innerHTML = winner
         winnerChances.innerHTML = `had a ${Math.floor(getOccurrence(raffleList,winner)/raffleList.length*100)}% chance of winning`
 
@@ -143,11 +143,11 @@ submitBtn.addEventListener('click', async function(){
     bigTick.id = "BigTickreveal"
     await new Promise(r => setTimeout(r, 2000));
     cabContain.id = "hidden"
-    console.log("done")
+
 })  
 
 textInputButton.addEventListener('click',function(){
-    console.log("hello")
+
     format = 2
     fileSettings.id = "hidden"
     textArea.id = "textarea"
